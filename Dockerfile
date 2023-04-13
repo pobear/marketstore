@@ -6,6 +6,7 @@
 FROM golang:1.18.1-buster as builder
 ARG tag=latest
 ARG INCLUDE_PLUGINS=true
+ENV GOPROXY https://goproxy.cn
 ENV DOCKER_TAG=$tag
 ENV GOPATH=/go
 
